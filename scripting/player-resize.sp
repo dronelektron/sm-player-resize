@@ -2,6 +2,7 @@
 
 #include "pr/console-command"
 #include "pr/message"
+#include "pr/use-case"
 
 #include "modules/console-command.sp"
 #include "modules/message.sp"
