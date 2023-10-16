@@ -1,0 +1,8 @@
+"Phrases"
+{
+    "Player resized"
+    {
+        "#format"   "{1:t},{2:.2f}"
+        "en"    "Player {1} resized to {2}"
+    }
+}
