@@ -1,10 +1,11 @@
 #include <sourcemod>
 
 #include "pr/console-command"
+#include "pr/entity"
 #include "pr/message"
-#include "pr/use-case"
 
 #include "modules/console-command.sp"
+#include "modules/entity.sp"
 #include "modules/message.sp"
 #include "modules/use-case.sp"
 
