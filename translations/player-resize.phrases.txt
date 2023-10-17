@@ -1,5 +1,11 @@
 "Phrases"
 {
+    "Invalid model scale"
+    {
+        "#format"   "{1:.2f},{2:.2f}"
+        "en"    "Model scale can be between {1} and {2}"
+    }
+
     "Player resized"
     {
         "#format"   "{1:t},{2:.2f}"

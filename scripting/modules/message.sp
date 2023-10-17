@@ -1,3 +1,7 @@
+void Message_InvalidModelScale(int client) {
+    ReplyToCommand(client, "%s%t", PREFIX, "Invalid model scale", MODEL_SCALE_MIN, MODEL_SCALE_MAX);
+}
+
 void Message_ResizeUsage(int client) {
     ReplyToCommand(client, "%s%s", PREFIX, "Usage: sm_resize <#userid|name> <scale>");
 }

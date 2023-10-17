@@ -14,6 +14,13 @@ public Action Command_Resize(int client, int args) {
     GetCmdArg(1, name, sizeof(name));
 
     float scale = GetCmdArgFloat(2);
+
+    if (scale < MODEL_SCALE_MIN || scale > MODEL_SCALE_MAX) {
+        Message_InvalidModelScale(client);
+
+        return Plugin_Handled;
+    }
+
     int[] targets = new int[MAXPLAYERS];
     char targetName[MAX_NAME_LENGTH];
     bool isMultilingual;
