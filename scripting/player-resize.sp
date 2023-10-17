@@ -12,7 +12,7 @@
 public Plugin myinfo = {
     name = "Player resize",
     author = "Dron-elektron",
-    description = "Allows you to resize players",
+    description = "Allows you to resize the player",
     version = "1.0.0",
     url = "https://github.com/dronelektron/player-resize"
 };
