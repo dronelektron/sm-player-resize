@@ -2,6 +2,7 @@
 #include <sdktools>
 
 #include "pr/console-command"
+#include "pr/console-variable"
 #include "pr/entity"
 #include "pr/message"
 #include "pr/sound-filter"

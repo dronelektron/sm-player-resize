@@ -17,4 +17,4 @@ Allows you to resize the player
 
 ### Console Variables
 
-* sm_playerresize_pitch_change - Change (no - 0, yes - 1) pitch depending on model scale [default: "1"]
+* sm_playerresize_pitch_change - Change (off - 0, on - 1) pitch depending on model scale [default: "1"]

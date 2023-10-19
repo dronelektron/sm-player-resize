@@ -6,14 +6,10 @@ void UseCase_Resize(int client, int target, float scale) {
 }
 
 int UseCase_ChangePitch(int entity, int pitch) {
-    if (Variable_ChangePitch()) {
-        float scale = Entity_GetModelScale(entity);
-        int offset = RoundFloat(10.0 * Logarithm(scale, 2.0));
+    float scale = Entity_GetModelScale(entity);
+    int offset = RoundFloat(10.0 * Logarithm(scale, 2.0));
 
-        return pitch - offset;
-    }
-
-    return pitch;
+    return pitch - offset;
 }
 
 bool UseCase_IsClient(int entity) {
@@ -21,6 +17,10 @@ bool UseCase_IsClient(int entity) {
 }
 
 void UseCase_UpdatePitchHookState(int ignoredClient = NO_CLIENT) {
+    if (!Variable_ChangePitch()) {
+        return;
+    }
+
     bool noResizedPlayers = true;
 
     for (int client = 1; client <= MaxClients; client++) {
