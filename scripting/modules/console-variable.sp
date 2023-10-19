@@ -1,9 +1,9 @@
-static ConVar g_pitchFactor;
+static ConVar g_changePitch;
 
 void Variable_Create() {
-    g_pitchFactor = CreateConVar("sm_playerresize_pitch_factor", "10.0", "Factor of pitch change depending on the model scale");
+    g_changePitch = CreateConVar("sm_playerresize_pitch_change", "1", "Change pitch depending on model scale");
 }
 
-float Variable_PitchFactor() {
-    return g_pitchFactor.FloatValue;
+bool Variable_ChangePitch() {
+    return g_changePitch.IntValue == 1;
 }

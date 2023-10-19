@@ -6,11 +6,14 @@ void UseCase_Resize(int client, int target, float scale) {
 }
 
 int UseCase_ChangePitch(int entity, int pitch) {
-    float scale = Entity_GetModelScale(entity);
-    float pitchFactor = Variable_PitchFactor();
-    int offset = RoundFloat(pitchFactor * Logarithm(scale, 2.0));
+    if (Variable_ChangePitch()) {
+        float scale = Entity_GetModelScale(entity);
+        int offset = RoundFloat(10.0 * Logarithm(scale, 2.0));
 
-    return pitch - offset;
+        return pitch - offset;
+    }
+
+    return pitch;
 }
 
 bool UseCase_IsClient(int entity) {
