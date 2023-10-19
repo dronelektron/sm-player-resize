@@ -19,3 +19,24 @@ int UseCase_ChangePitch(int entity, int pitch) {
 bool UseCase_IsClient(int entity) {
     return 1 <= entity && entity <= MaxClients;
 }
+
+void UseCase_UpdatePitchHookState(int ignoredClient = NO_CLIENT) {
+    bool noResizedPlayers = true;
+
+    for (int client = 1; client <= MaxClients; client++) {
+        if (!IsClientInGame(client) || client == ignoredClient) {
+            continue;
+        }
+
+        float scale = Entity_GetModelScale(client);
+        bool isDefaultScale = FloatCompare(scale, BASE_SCALE) == 0;
+
+        noResizedPlayers &= isDefaultScale;
+    }
+
+    if (noResizedPlayers) {
+        Sound_DisablePitchHook();
+    } else {
+        Sound_EnablePitchHook();
+    }
+}

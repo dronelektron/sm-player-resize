@@ -5,6 +5,7 @@
 #include "pr/entity"
 #include "pr/message"
 #include "pr/sound-filter"
+#include "pr/use-case"
 
 #include "modules/console-command.sp"
 #include "modules/console-variable.sp"
@@ -28,8 +29,11 @@ public void OnPluginStart() {
     Command_Create();
     Variable_Create();
     SoundFilter_Create();
-    Sound_EnablePitchHook();
     LoadTranslations("common.phrases");
     LoadTranslations("player-resize.phrases");
     AutoExecConfig(AUTO_CREATE_YES, "player-resize");
+}
+
+public void OnClientDisconnect(int client) {
+    UseCase_UpdatePitchHookState(client);
 }

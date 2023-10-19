@@ -44,6 +44,7 @@ public Action Command_Resize(int client, int args) {
     bool resized = playersAmount > 0;
 
     if (resized) {
+        UseCase_UpdatePitchHookState();
         MessageActivity_PlayerResized(client, targetName, isMultilingual, scale);
     }
 
