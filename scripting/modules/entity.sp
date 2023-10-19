@@ -1,3 +1,7 @@
+float Entity_GetModelScale(int entity) {
+    return GetEntPropFloat(entity, Prop_Send, "m_flModelScale");
+}
+
 void Entity_SetModelScale(int entity, float scale) {
     SetEntPropFloat(entity, Prop_Send, "m_flModelScale", scale);
 }

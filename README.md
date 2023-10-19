@@ -14,3 +14,7 @@ Allows you to resize the player
 ### Console Commands
 
 * sm_resize \<#userid|name\> \<scale\> - Resize the player
+
+### Console Variables
+
+* sm_playerresize_voice_factor - How quickly the pitch of the voice changes depending on the scale of the model [default: "10.0"]
