@@ -4,13 +4,14 @@
 #include "pr/console-command"
 #include "pr/entity"
 #include "pr/message"
-#include "pr/sound"
+#include "pr/sound-filter"
 
 #include "modules/console-command.sp"
 #include "modules/console-variable.sp"
 #include "modules/entity.sp"
 #include "modules/message.sp"
 #include "modules/use-case.sp"
+#include "modules/sound-filter.sp"
 #include "modules/sound.sp"
 
 #define AUTO_CREATE_YES true
@@ -26,6 +27,7 @@ public Plugin myinfo = {
 public void OnPluginStart() {
     Command_Create();
     Variable_Create();
+    SoundFilter_Create();
     Sound_EnablePitchHook();
     LoadTranslations("common.phrases");
     LoadTranslations("player-resize.phrases");
