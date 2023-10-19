@@ -17,4 +17,4 @@ Allows you to resize the player
 
 ### Console Variables
 
-* sm_playerresize_voice_factor - How quickly the pitch of the voice changes depending on the scale of the model [default: "10.0"]
+* sm_playerresize_pitch_factor - Factor of pitch change depending on the model scale [default: "10.0"]

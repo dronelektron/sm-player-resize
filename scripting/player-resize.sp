@@ -26,7 +26,7 @@ public Plugin myinfo = {
 public void OnPluginStart() {
     Command_Create();
     Variable_Create();
-    Sound_Create();
+    Sound_EnablePitchHook();
     LoadTranslations("common.phrases");
     LoadTranslations("player-resize.phrases");
     AutoExecConfig(AUTO_CREATE_YES, "player-resize");

@@ -7,12 +7,12 @@ void UseCase_Resize(int client, int target, float scale) {
 
 int UseCase_ChangePitch(int entity, int pitch) {
     float scale = Entity_GetModelScale(entity);
-    float voiceFactor = Variable_VoiceFactor();
-    int offset = RoundFloat(voiceFactor * Logarithm(scale, 2.0));
+    float pitchFactor = Variable_PitchFactor();
+    int offset = RoundFloat(pitchFactor * Logarithm(scale, 2.0));
 
     return pitch - offset;
 }
 
-bool UseCase_IsNotClient(int entity) {
-    return entity < 1 || entity > MaxClients
+bool UseCase_IsClient(int entity) {
+    return 1 <= entity && entity <= MaxClients;
 }
