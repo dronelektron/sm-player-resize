@@ -21,6 +21,18 @@ public Action Command_Resize(int client, int args) {
         return Plugin_Handled;
     }
 
+    int resizeMode = RESIZE_MODE_DISCONNECT;
+
+    if (args > 2) {
+        resizeMode = GetCmdArgInt(3);
+
+        if (resizeMode < RESIZE_MODE_DEATH || resizeMode > RESIZE_MODE_DISCONNECT) {
+            Message_InvalidResizeMode(client);
+
+            return Plugin_Handled;
+        }
+    }
+
     int[] targets = new int[MAXPLAYERS];
     char targetName[MAX_NAME_LENGTH];
     bool isMultilingual;
@@ -38,14 +50,13 @@ public Action Command_Resize(int client, int args) {
     for (int i = 0; i < playersAmount; i++) {
         int target = targets[i];
 
-        UseCase_Resize(client, target, scale);
+        UseCase_Resize(client, target, scale, resizeMode);
     }
 
     bool resized = playersAmount > 0;
 
     if (resized) {
-        UseCase_UpdatePitchHookState();
-        MessageActivity_PlayerResized(client, targetName, isMultilingual, scale);
+        MessageActivity_PlayerResized(client, targetName, isMultilingual, scale, resizeMode);
     }
 
     return Plugin_Handled;

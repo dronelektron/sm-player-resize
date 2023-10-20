@@ -6,9 +6,46 @@
         "en"    "Model scale can be between {1} and {2}"
     }
 
+    "Invalid resize mode"
+    {
+        "#format"   "{1:d},{2:d}"
+        "en"    "Resize mode can be between {1} and {2}"
+    }
+
     "Player resized"
     {
-        "#format"   "{1:t},{2:.2f}"
+        "#format"   "{1:t},{2:t}"
         "en"    "Player {1} resized to {2}"
+    }
+
+    "default scale"
+    {
+        "en"    "default scale"
+    }
+
+    "custom scale"
+    {
+        "#format"   "{1:.2f},{2:t}"
+        "en"    "{1} ({2})"
+    }
+
+    "until death"
+    {
+        "en"    "until death"
+    }
+
+    "until round end"
+    {
+        "en"    "until round end"
+    }
+
+    "until round start"
+    {
+        "en"    "until round start"
+    }
+
+    "until disconnect"
+    {
+        "en"    "until disconnect"
     }
 }
