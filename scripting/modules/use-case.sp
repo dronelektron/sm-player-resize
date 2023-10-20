@@ -1,7 +1,7 @@
 void UseCase_ResizeToDefaultScale(int client, int eventResizeMode) {
     int clientResizeMode = Client_GetResizeMode(client);
 
-    if (clientResizeMode <= eventResizeMode) {
+    if (RESIZE_MODE_NONE < clientResizeMode && clientResizeMode <= eventResizeMode) {
         UseCase_ResizeSilently(client, BASE_SCALE, RESIZE_MODE_NONE);
     }
 }
