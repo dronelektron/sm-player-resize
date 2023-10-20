@@ -13,8 +13,15 @@ Allows you to resize the player
 
 ### Console Commands
 
-* sm_resize \<#userid|name\> \<scale\> - Resize the player
+* sm_resize \<#userid|name\> \<scale\> \[mode\] - Resize the player
 
 ### Console Variables
 
 * sm_playerresize_pitch_change - Change (off - 0, on - 1) pitch depending on model scale [default: "1"]
+
+### Resize Mode
+
+* Until death - 1
+* Until round end - 2
+* Until round start - 3
+* Until disconnect - 4 (default)
