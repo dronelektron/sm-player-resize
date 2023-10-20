@@ -10,9 +10,12 @@ int Client_GetResizeMode(int client) {
 }
 
 void Client_SetResizeMode(int client, int resizeMode) {
-    if (g_resizeMode[client] == RESIZE_MODE_NONE && resizeMode != RESIZE_MODE_NONE) {
+    bool fromDefaultToCustomScale = g_resizeMode[client] == RESIZE_MODE_NONE && resizeMode != RESIZE_MODE_NONE;
+    bool fromCustomToDefaultScale = g_resizeMode[client] != RESIZE_MODE_NONE && resizeMode == RESIZE_MODE_NONE;
+
+    if (fromDefaultToCustomScale) {
         g_resizedPlayersAmount++;
-    } else if (g_resizeMode[client] != RESIZE_MODE_NONE && resizeMode == RESIZE_MODE_NONE) {
+    } else if (fromCustomToDefaultScale) {
         g_resizedPlayersAmount--;
     }
 
