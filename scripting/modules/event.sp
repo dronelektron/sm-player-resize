@@ -13,12 +13,16 @@ public void Event_PlayerSpawn(Event event, const char[] name, bool dontBroadcast
 
 public void Event_RoundWin(Event event, const char[] name, bool dontBroadcast) {
     for (int client = 1; client <= MaxClients; client++) {
-        UseCase_ResizeToDefaultScale(client, RESIZE_MODE_ROUND_END);
+        if (IsClientInGame(client)) {
+            UseCase_ResizeToDefaultScale(client, RESIZE_MODE_ROUND_END);
+        }
     }
 }
 
 public void Event_RoundStart(Event event, const char[] name, bool dontBroadcast) {
     for (int client = 1; client <= MaxClients; client++) {
-        UseCase_ResizeToDefaultScale(client, RESIZE_MODE_ROUND_START);
+        if (IsClientInGame(client)) {
+            UseCase_ResizeToDefaultScale(client, RESIZE_MODE_ROUND_START);
+        }
     }
 }
