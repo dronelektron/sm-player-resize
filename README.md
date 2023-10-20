@@ -23,7 +23,7 @@ Allows you to resize the player
 
 ### Resize Mode
 
-* Until death - 1
+* Until death (during the round) - 1
 * Until round end - 2
 * Until round start - 3
 * Until disconnect - 4 (default)
