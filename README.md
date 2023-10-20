@@ -17,7 +17,9 @@ Allows you to resize the player
 
 ### Console Variables
 
-* sm_playerresize_pitch_change - Change (off - 0, on - 1) pitch depending on model scale [default: "1"]
+* sm_playerresize_pitch_enable - Change (off - 0, on - 1) pitch depending on model scale [default: "1"]
+* sm_playerresize_pitch_log_base - Logarithm base for pitch [default: "2.0"]
+* sm_playerresize_pitch_log_factor - Logarithm factor for pitch [default: "20.0"]
 
 ### Resize Mode
 
