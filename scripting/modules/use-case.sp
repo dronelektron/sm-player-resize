@@ -29,9 +29,11 @@ void UseCase_ResizeSilently(int client, float scale, int resizeMode) {
 
 int UseCase_ChangePitch(int entity, int pitch) {
     float scale = Entity_GetModelScale(entity);
-    int offset = RoundFloat(10.0 * Logarithm(scale, 2.0));
+    float base = Variable_LogarithmBase();
+    float factor = Variable_LogarithmFactor();
+    float offset = factor * Logarithm(scale, base);
 
-    return pitch - offset;
+    return pitch - RoundFloat(offset);
 }
 
 bool UseCase_IsClient(int entity) {
