@@ -22,7 +22,7 @@ void UseCase_ResizeSilently(int client, float scale, int resizeMode) {
         Client_SetResizeMode(client, resizeMode);
     }
 
-    if (Variable_ChangePitch()) {
+    if (Variable_EnablePitch()) {
         UseCase_UpdatePitchHookState();
     }
 }
