@@ -22,9 +22,7 @@ void UseCase_ResizeSilently(int client, float scale, int resizeMode) {
         Client_SetResizeMode(client, resizeMode);
     }
 
-    if (Variable_EnablePitch()) {
-        UseCase_UpdatePitchHookState();
-    }
+    UseCase_UpdatePitchHookState();
 }
 
 int UseCase_ChangePitch(int entity, int pitch) {
@@ -45,6 +43,10 @@ bool UseCase_IsDefaultScale(float scale) {
 }
 
 void UseCase_UpdatePitchHookState() {
+    if (!Variable_EnablePitch()) {
+        return;
+    }
+
     int resizedPlayersAmount = Client_GetResizedPlayersAmount();
 
     if (resizedPlayersAmount > 0) {

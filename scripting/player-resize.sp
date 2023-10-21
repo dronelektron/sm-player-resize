@@ -43,5 +43,6 @@ public void OnClientConnected(int client) {
 }
 
 public void OnClientDisconnect(int client) {
-    UseCase_ResizeToDefaultScale(client, RESIZE_MODE_DISCONNECT);
+    Client_SetResizeMode(client, RESIZE_MODE_NONE);
+    UseCase_UpdatePitchHookState();
 }
