@@ -12,6 +12,12 @@ void UseCase_Resize(int client, int target, float scale, int resizeMode) {
 }
 
 void UseCase_ResizeSilently(int client, float scale, int resizeMode) {
+    int clientResizeMode = Client_GetResizeMode(client);
+
+    if (clientResizeMode == RESIZE_MODE_NONE && UseCase_IsDefaultScale(scale)) {
+        return;
+    }
+
     Entity_SetModelScale(client, scale);
     Entity_SetStepSize(client, BASE_STEP_SIZE * scale);
     Entity_SetViewOffsetZ(client, BASE_VIEW_OFFSET_Z * scale);
@@ -22,9 +28,7 @@ void UseCase_ResizeSilently(int client, float scale, int resizeMode) {
         Client_SetResizeMode(client, resizeMode);
     }
 
-    if (Variable_EnablePitch()) {
-        UseCase_UpdatePitchHookState();
-    }
+    UseCase_UpdatePitchHookState();
 }
 
 int UseCase_ChangePitch(int entity, int pitch) {
@@ -45,6 +49,10 @@ bool UseCase_IsDefaultScale(float scale) {
 }
 
 void UseCase_UpdatePitchHookState() {
+    if (!Variable_EnablePitch()) {
+        return;
+    }
+
     int resizedPlayersAmount = Client_GetResizedPlayersAmount();
 
     if (resizedPlayersAmount > 0) {

@@ -24,7 +24,7 @@ public Plugin myinfo = {
     name = "Player resize",
     author = "Dron-elektron",
     description = "Allows you to resize the player",
-    version = "1.2.0",
+    version = "1.2.1",
     url = "https://github.com/dronelektron/player-resize"
 };
 
@@ -43,5 +43,6 @@ public void OnClientConnected(int client) {
 }
 
 public void OnClientDisconnect(int client) {
-    UseCase_ResizeToDefaultScale(client, RESIZE_MODE_DISCONNECT);
+    Client_SetResizeMode(client, RESIZE_MODE_NONE);
+    UseCase_UpdatePitchHookState();
 }
