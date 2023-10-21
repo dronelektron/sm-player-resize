@@ -1,7 +1,7 @@
 void UseCase_ResizeToDefaultScale(int client, int eventResizeMode) {
     int clientResizeMode = Client_GetResizeMode(client);
 
-    if (RESIZE_MODE_NONE < clientResizeMode && clientResizeMode <= eventResizeMode) {
+    if (clientResizeMode <= eventResizeMode) {
         UseCase_ResizeSilently(client, BASE_SCALE, RESIZE_MODE_NONE);
     }
 }
@@ -12,6 +12,12 @@ void UseCase_Resize(int client, int target, float scale, int resizeMode) {
 }
 
 void UseCase_ResizeSilently(int client, float scale, int resizeMode) {
+    int clientResizeMode = Client_GetResizeMode(client);
+
+    if (clientResizeMode == RESIZE_MODE_NONE && UseCase_IsDefaultScale(scale)) {
+        return;
+    }
+
     Entity_SetModelScale(client, scale);
     Entity_SetStepSize(client, BASE_STEP_SIZE * scale);
     Entity_SetViewOffsetZ(client, BASE_VIEW_OFFSET_Z * scale);
