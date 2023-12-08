@@ -27,3 +27,9 @@ Allows you to resize the player
 * Until round end - 2
 * Until round start - 3
 * Until disconnect - 4 (default)
+
+### API
+
+```
+native void ResizePlayer(int client, float scale, int resizeMode);
+```

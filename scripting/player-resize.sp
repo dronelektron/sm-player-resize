@@ -6,6 +6,7 @@
 #include "pr/console-variable"
 #include "pr/entity"
 #include "pr/message"
+#include "pr/native"
 #include "pr/sound-filter"
 
 #include "modules/client.sp"
@@ -14,6 +15,7 @@
 #include "modules/entity.sp"
 #include "modules/event.sp"
 #include "modules/message.sp"
+#include "modules/native.sp"
 #include "modules/use-case.sp"
 #include "modules/sound-filter.sp"
 #include "modules/sound.sp"
@@ -27,6 +29,12 @@ public Plugin myinfo = {
     version = "1.2.1",
     url = "https://github.com/dronelektron/player-resize"
 };
+
+public APLRes AskPluginLoad2(Handle plugin, bool late, char[] error, int errorMax) {
+    Native_Create();
+
+    return APLRes_Success;
+}
 
 public void OnPluginStart() {
     Command_Create();
