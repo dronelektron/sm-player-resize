@@ -6,14 +6,18 @@ Allows you to resize the player
 
 * Day of Defeat: Source
 
+### Requirements
+
+* [SourceMod](https://www.sourcemod.net) 1.11 or later
+
 ### Installation
 
-* Download latest [release](https://github.com/dronelektron/player-resize/releases) (compiled for SourceMod 1.11)
-* Extract "plugins" and "translations" folders to "addons/sourcemod" folder of your server
+* Download latest [release](https://github.com/dronelektron/player-resize/releases)
+* Extract `plugins` and `translations` folders to `addons/sourcemod` folder of your server
 
 ### Console Commands
 
-* sm_resize \<#userid|name\> \<scale\> \[mode\] - Resize the player
+* sm_resize &lt;#userid|name&gt; &lt;scale&gt; \[mode\] - Resize the player
 
 ### Console Variables
 
@@ -30,6 +34,8 @@ Allows you to resize the player
 
 ### API
 
-```
+Resize the `client` to `scale` using `resizeMode`
+
+```sourcepawn
 native void ResizePlayer(int client, float scale, int resizeMode);
 ```
