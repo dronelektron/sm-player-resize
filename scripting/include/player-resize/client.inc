@@ -1,7 +1,7 @@
-#if defined _pr_client_included
+#if defined _player_resize_client_included
  #endinput
 #endif
-#define _pr_client_included
+#define _player_resize_client_included
 
 #define RESIZE_MODE_NONE 0
 #define RESIZE_MODE_DEATH 1

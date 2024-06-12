@@ -1,7 +1,7 @@
-#if defined _pr_console_command_included
+#if defined _player_resize_console_command_included
  #endinput
 #endif
-#define _pr_console_command_included
+#define _player_resize_console_command_included
 
 #define COMMAND_FILTER_NONE 0
 
