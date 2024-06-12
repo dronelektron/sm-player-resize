@@ -1,13 +1,13 @@
 #include <sourcemod>
 #include <sdktools>
 
-#include "pr/client"
-#include "pr/console-command"
-#include "pr/console-variable"
-#include "pr/entity"
-#include "pr/message"
-#include "pr/native"
-#include "pr/sound-filter"
+#include "player-resize/client"
+#include "player-resize/console-command"
+#include "player-resize/console-variable"
+#include "player-resize/entity"
+#include "player-resize/message"
+#include "player-resize/native"
+#include "player-resize/sound-filter"
 
 #include "modules/client.sp"
 #include "modules/console-command.sp"
@@ -26,7 +26,7 @@ public Plugin myinfo = {
     name = "Player resize",
     author = "Dron-elektron",
     description = "Allows you to resize the player",
-    version = "1.3.0",
+    version = "1.4.0",
     url = "https://github.com/dronelektron/player-resize"
 };
 

@@ -1,7 +1,7 @@
-#if defined _pr_entity_included
+#if defined _player_resize_entity_included
  #endinput
 #endif
-#define _pr_entity_included
+#define _player_resize_entity_included
 
 #define BASE_SCALE 1.0
 #define BASE_STEP_SIZE 18.0
