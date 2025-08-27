@@ -6,4 +6,4 @@
 #define COMMAND_FILTER_NONE 0
 
 #define MODEL_SCALE_MIN 0.2
-#define MODEL_SCALE_MAX 3.0
+#define MODEL_SCALE_MAX 4.0
