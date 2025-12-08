@@ -6,7 +6,6 @@
 #include "player-resize/console-variable"
 #include "player-resize/entity"
 #include "player-resize/message"
-#include "player-resize/native"
 #include "player-resize/sound-filter"
 
 #include "modules/client.sp"

@@ -1,3 +1,5 @@
+static const int VOID = 0;
+
 void Native_Create() {
     CreateNative("ResizePlayer", Native_ResizePlayer);
     RegPluginLibrary("player-resize");
