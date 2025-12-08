@@ -12,7 +12,7 @@ Allows you to resize the player
 
 ### Installation
 
-* Download latest [release](https://github.com/dronelektron/player-resize/releases)
+* Download latest [release](https://github.com/dronelektron/sm-player-resize/releases)
 * Extract `plugins` and `translations` folders to `addons/sourcemod` folder of your server
 
 ### Console Commands

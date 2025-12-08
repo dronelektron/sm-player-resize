@@ -24,7 +24,7 @@ public Plugin myinfo = {
     author = "Dron-elektron",
     description = "Allows you to resize the player",
     version = "1.4.1",
-    url = "https://github.com/dronelektron/player-resize"
+    url = "https://github.com/dronelektron/sm-player-resize"
 };
 
 public APLRes AskPluginLoad2(Handle plugin, bool late, char[] error, int errorMax) {
