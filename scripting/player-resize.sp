@@ -19,8 +19,6 @@
 #include "modules/sound-filter.sp"
 #include "modules/sound.sp"
 
-#define AUTO_CREATE_YES true
-
 public Plugin myinfo = {
     name = "Player resize",
     author = "Dron-elektron",
@@ -42,7 +40,7 @@ public void OnPluginStart() {
     SoundFilter_Create();
     LoadTranslations("common.phrases");
     LoadTranslations("player-resize.phrases");
-    AutoExecConfig(AUTO_CREATE_YES, "player-resize");
+    AutoExecConfig(_, "player-resize");
 }
 
 public void OnClientConnected(int client) {
