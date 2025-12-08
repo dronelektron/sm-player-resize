@@ -37,5 +37,5 @@ Allows you to resize the player
 Resize the `client` to `scale` using `resizeMode`
 
 ```sourcepawn
-native void ResizePlayer(int client, float scale, int resizeMode);
+native void Player_Resize(int client, float scale, int resizeMode);
 ```

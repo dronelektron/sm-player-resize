@@ -1,10 +1,10 @@
 static const int VOID = 0;
 
 void Native_Create() {
-    CreateNative("ResizePlayer", Native_ResizePlayer);
+    CreateNative("Player_Resize", OnResizePlayer);
 }
 
-any Native_ResizePlayer(Handle plugin, int numParams) {
+static any OnResizePlayer(Handle plugin, int numParams) {
     int client = GetNativeCell(1);
     float scale = GetNativeCell(2);
     int resizeMode = GetNativeCell(3);
