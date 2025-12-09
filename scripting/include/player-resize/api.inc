@@ -3,4 +3,4 @@
 #endif
 #define _player_resize_api_included
 
-native void ResizePlayer(int client, float scale, int resizeMode);
+native void Player_Resize(int client, float scale);

@@ -1,9 +1,12 @@
+static const int NO_VALUE = 0;
 static StringMap g_sounds;
 
 void SoundFilter_Create() {
     g_sounds = new StringMap();
 
-    SoundFilter_Add("sound/player");
+    SoundFilter_Add("sound/player/american");
+    SoundFilter_Add("sound/player/damage");
+    SoundFilter_Add("sound/player/german");
 }
 
 bool SoundFilter_IsPlayerSound(const char[] sample) {
