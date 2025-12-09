@@ -18,7 +18,7 @@ public Plugin myinfo = {
     name = "Player resize",
     author = "Dron-elektron",
     description = "Allows you to change the size of the players",
-    version = "1.4.1",
+    version = "2.0.0",
     url = "https://github.com/dronelektron/sm-player-resize"
 };
 
