@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PLUGIN_NAME="player-resize"
-
 cd scripting
-spcomp $PLUGIN_NAME.sp -i include -o ../plugins/$PLUGIN_NAME.smx
+
+PLUGIN_NAME="player-resize"
+$SP_1_12 $PLUGIN_NAME.sp -i include -o ../plugins/$PLUGIN_NAME.smx

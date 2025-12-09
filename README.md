@@ -8,7 +8,7 @@ Allows you to change the size of the players
 
 ### Requirements
 
-* [SourceMod](https://www.sourcemod.net) 1.11 or later
+* [SourceMod](https://www.sourcemod.net) 1.12 or later
 
 ### Installation
 
