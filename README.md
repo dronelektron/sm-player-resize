@@ -1,6 +1,6 @@
 # Player resize
 
-Allows you to resize the player
+Allows you to change the size of the players
 
 ### Supported Games
 
@@ -17,7 +17,7 @@ Allows you to resize the player
 
 ### Console Commands
 
-* sm_resize &lt;#userid|name&gt; &lt;scale&gt; \[mode\] - Resize the player
+* sm_resize &lt;#userid|name&gt; &lt;scale&gt; - Resize the player
 
 ### Console Variables
 
@@ -25,17 +25,10 @@ Allows you to resize the player
 * sm_playerresize_pitch_log_base - Logarithm base for pitch [default: "2.0"]
 * sm_playerresize_pitch_log_factor - Logarithm factor for pitch [default: "20.0"]
 
-### Resize Mode
-
-* Until death (during the round) - 1
-* Until round end - 2
-* Until round start - 3
-* Until disconnect - 4 (default)
-
 ### API
 
-Resize the `client` to `scale` using `resizeMode`
+Resize the `client` to `scale`
 
 ```sourcepawn
-native void Player_Resize(int client, float scale, int resizeMode);
+native void Player_Resize(int client, float scale);
 ```

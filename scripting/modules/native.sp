@@ -7,9 +7,10 @@ void Native_Create() {
 static any OnResizePlayer(Handle plugin, int numParams) {
     int client = GetNativeCell(1);
     float scale = GetNativeCell(2);
-    int resizeMode = GetNativeCell(3);
 
-    UseCase_ResizeSilently(client, scale, resizeMode);
+    scale = Math_Clamp(scale, ENTITY_SCALE_MIN, ENTITY_SCALE_MAX);
+
+    UseCase_ResizePlayer(client, scale);
 
     return VOID;
 }
