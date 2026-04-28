@@ -7,6 +7,8 @@ void SoundFilter_Create() {
     SoundFilter_Add("sound/player/american");
     SoundFilter_Add("sound/player/damage");
     SoundFilter_Add("sound/player/german");
+    // voice_wtf
+    g_sounds.SetValue("player/jester.wav", NO_VALUE);
 }
 
 bool SoundFilter_IsPlayerSound(const char[] sample) {
